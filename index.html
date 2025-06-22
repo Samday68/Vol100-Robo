@@ -1,23 +1,29 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <title>Vol100 Robot</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vol100 Last Digit Robot</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-    <div id="login">
-        <h2>Giriş Yap</h2>
-        <input type="text" id="username" placeholder="Kullanıcı Adı">
-        <input type="password" id="password" placeholder="Şifre">
-        <button onclick="login()">Giriş</button>
-    </div>
-    <div id="app" style="display:none;">
-        <h1>Last Digit Analiz</h1>
-        <button onclick="analyze()">Analiz Et</button>
-        <div id="result"></div>
-    </div>
-    <script src="login.js"></script>
-    <script src="script.js"></script>
+  <div id="login-screen">
+    <h2>Giriş Yap</h2>
+    <input id="username" placeholder="Kullanıcı Adı" />
+    <input id="password" type="password" placeholder="Şifre" />
+    <button onclick="login()">Giriş</button>
+    <p id="login-error"></p>
+  </div>
+
+  <div id="app" style="display:none;">
+    <h1>Volatility 100 - Last Digit Analiz</h1>
+    <p><strong>Son 5 Rakam:</strong> <span id="digits">–</span></p>
+    <p><strong>Tahmin:</strong> <span id="prediction">–</span></p>
+    <canvas id="chart" height="200"></canvas>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
