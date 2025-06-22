@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vol100 Robot</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="login">
+        <h2>Giriş Yap</h2>
+        <input type="text" id="username" placeholder="Kullanıcı Adı">
+        <input type="password" id="password" placeholder="Şifre">
+        <button onclick="login()">Giriş</button>
+    </div>
+    <div id="app" style="display:none;">
+        <h1>Last Digit Analiz</h1>
+        <button onclick="analyze()">Analiz Et</button>
+        <div id="result"></div>
+    </div>
+    <script src="login.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
